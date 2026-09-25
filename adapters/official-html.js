@@ -34,6 +34,36 @@ function normalizeText(s) {
   return String(s || '').replace(/\s+/g, ' ').trim();
 }
 
+/** Official still URLs only (nuerburgring.de / their S3). Never invent. */
+function pickOfficialImage($, root, opts = {}) {
+  const useMeta = opts.useMeta !== false;
+  const scope = root || $.root();
+  const candidates = [];
+  // Prefer images inside the given article/card — never share the page og:image across items
+  scope.find('img').each((_, img) => {
+    const src = $(img).attr('src') || $(img).attr('data-src') || '';
+    if (src) candidates.push(src);
+  });
+  if (useMeta) {
+    const metas = ['og:image', 'twitter:image', 'twitter:image:src'];
+    for (const m of metas) {
+      const v = $(`meta[property="${m}"], meta[name="${m}"]`).attr('content');
+      if (v) candidates.unshift(v);
+    }
+  }
+  for (const raw of candidates) {
+    let src = String(raw).trim();
+    if (src.startsWith('//')) src = `https:${src}`;
+    if (src.startsWith('/')) src = `https://nuerburgring.de${src}`;
+    if (!/^https?:\/\//i.test(src)) continue;
+    // official host / official media bucket only
+    if (!/nuerburgring\.de|s3nbrg01prod\.s3\.eu-central-1\.amazonaws\.com/i.test(src)) continue;
+    if (/\.(svg|gif)(\?|$)/i.test(src)) continue;
+    return src;
+  }
+  return null;
+}
+
 function recordId(parts) {
   return parts.join('|');
 }
@@ -363,10 +393,20 @@ export function parseNewsHtml(html, sourceUrl = NEWS_URL_EN) {
       summary_zh_is_site_translation: 0,
       published_at: published_at || new Date().toISOString().slice(0, 10),
       source_url: href,
+      image_url: pickOfficialImage($, $art, { useMeta: false }),
     });
   });
 
   return { items, sourceUrl };
+}
+
+/**
+ * og:image / article hero from an official news page.
+ * @param {string} html
+ */
+export function parseOfficialArticleImage(html) {
+  const $ = cheerio.load(html);
+  return pickOfficialImage($, $.root(), { useMeta: true });
 }
 
 /**

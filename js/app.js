@@ -58,20 +58,39 @@ async function loadData({ silent = false } = {}) {
 }
 
 async function pollVersion() {
+  // Server mode: /api/sync/status
   try {
     const res = await fetch('/api/sync/status', { cache: 'no-store' });
-    if (!res.ok) return;
-    const status = await res.json();
-    renderSyncFromStatus(status);
-    const remote = status.data_version;
-    const local = state.data?.meta?.data_version;
-    if (remote && local && remote !== local) {
-      await loadData({ silent: true });
-    } else if (remote && !local) {
-      await loadData({ silent: true });
+    if (res.ok) {
+      const status = await res.json();
+      renderSyncFromStatus(status);
+      const remote = status.data_version;
+      const local = state.data?.meta?.data_version;
+      if (remote && remote !== local) {
+        await loadData({ silent: true });
+      }
+      return;
     }
   } catch {
-    /* static mode — no poll */
+    /* fall through to static poll */
+  }
+
+  // Static mode (GitHub Pages): published.json is refreshed by Actions
+  try {
+    const res = await fetch('./data/published.json', { cache: 'no-store' });
+    if (!res.ok) return;
+    const payload = await res.json();
+    const remote = payload?.meta?.data_version;
+    const local = state.data?.meta?.data_version;
+    if (remote && remote !== local) {
+      state.data = payload;
+      state.sourceMode = 'static';
+      renderAll();
+      renderNotice();
+      renderSyncPill();
+    }
+  } catch {
+    /* ignore */
   }
 }
 
@@ -639,22 +658,24 @@ function hideMediaBackground() {
   updateMuteButton();
 }
 
-/** Track photo: official onboard still when reachable, else local vehicle art, else track fallback. */
+/**
+ * Official still only:
+ * 1) photo_url (nuerburgring.de / official media bucket, from sync)
+ * 2) YouTube thumbnail from official onboard (may be blocked on some networks)
+ * Never substitute with generated art — missing media shows 暂无资料.
+ */
 function trackPhotoFor(r) {
-  const slug = String(r.vehicle_en)
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-    .slice(0, 48);
   const yt = youtubeId(r.video_url);
+  const official = r.photo_url || '';
+  const ytThumb = yt ? `https://i.ytimg.com/vi/${yt}/hqdefault.jpg` : '';
+  const src = official || ytThumb;
   return {
-    // try official still first (works when YouTube CDN is reachable)
-    src: yt ? `https://i.ytimg.com/vi/${yt}/hqdefault.jpg` : `./assets/vehicles/${slug}.jpg`,
-    fallback: `./assets/vehicles/${slug}.jpg`,
-    finalFallback: './assets/vehicles/track-fallback.jpg',
+    src,
+    fallback: official ? '' : ytThumb, // if yt fails and we already used official, stop
+    finalFallback: '',
     href: r.video_url || r.source_url,
-    credit: yt ? 'official-still' : 'generated',
-    fallbackSlug: slug,
+    credit: official ? 'official-still' : yt ? 'official-still' : 'none',
+    hasOfficial: Boolean(src),
   };
 }
 
@@ -670,31 +691,45 @@ function renderDetail(id) {
   const photo = trackPhotoFor(r);
   const vehicleBtn = `<button type="button" class="vehicle-link" data-open-vehicle="${escapeAttr(r.vehicle_en)}">${escapeHtml(r.vehicle_en)}</button>`;
 
-  body.innerHTML = `
+  const photoHtml = photo.hasOfficial
+    ? `
     <figure class="detail-photo" data-missing="${escapeAttr(miss)}">
       <a class="detail-photo__link" href="${escapeAttr(photo.href)}" target="_blank" rel="noopener">
         <img
           class="detail-photo__img"
           src="${escapeAttr(photo.src)}"
-          data-f1="${escapeAttr(photo.fallback)}"
-          data-f2="${escapeAttr(photo.finalFallback)}"
+          ${photo.fallback ? `data-f1="${escapeAttr(photo.fallback)}"` : ''}
           alt="${escapeHtml(r.vehicle_en)} — ${escapeHtml(t('detail.trackPhoto'))}"
           loading="lazy"
           decoding="async"
-          onerror="const s=[this.dataset.f1,this.dataset.f2].filter(Boolean); const n=Number(this.dataset.fb||0); if (n<s.length) { this.dataset.fb=String(n+1); this.src=s[n]; } else { this.closest('.detail-photo').classList.add('is-missing'); this.remove(); }"
+          referrerpolicy="no-referrer"
+          onerror="const s=[this.dataset.f1].filter(Boolean); const n=Number(this.dataset.fb||0); if (n<s.length) { this.dataset.fb=String(n+1); this.src=s[n]; } else { this.closest('.detail-photo').classList.add('is-missing'); this.remove(); }"
         />
       </a>
       <figcaption class="detail-photo__cap">
-        <span>${photo.credit === 'official-still' ? t('detail.photoOfficial') : t('detail.photoGenerated')}</span>
+        <span>${t('detail.photoOfficial')}</span>
         ${
           photo.href
-            ? `<a href="${escapeAttr(photo.href)}" target="_blank" rel="noopener">${
-                photo.credit === 'official-still' ? t('detail.video') : t('detail.source')
-              }</a>`
+            ? `<a href="${escapeAttr(photo.href)}" target="_blank" rel="noopener">${t('detail.video')}</a>`
             : ''
         }
       </figcaption>
-    </figure>
+    </figure>`
+    : `
+    <figure class="detail-photo is-missing" data-missing="${escapeAttr(miss)}">
+      <div class="detail-photo__empty">${escapeHtml(miss)}</div>
+      <figcaption class="detail-photo__cap">
+        <span>${t('detail.trackPhoto')}</span>
+        ${
+          r.video_url
+            ? `<a href="${escapeAttr(r.video_url)}" target="_blank" rel="noopener">${t('detail.video')}</a>`
+            : `<a href="${escapeAttr(r.source_url)}" target="_blank" rel="noopener">${t('detail.source')}</a>`
+        }
+      </figcaption>
+    </figure>`;
+
+  body.innerHTML = `
+    ${photoHtml}
     <p class="detail-time">${r.lap_time_display}</p>
     <dl class="detail-kv">
       <dt>${t('detail.vehicle')}</dt><dd>${vehicleBtn}</dd>
@@ -933,7 +968,8 @@ function openVehicleTicket(vehicleName, focusRecordId) {
   `;
 
   tearTicketInstance = mountTearTicket(mount, {
-    image: photo?.finalFallback || photo?.src || './assets/vehicles/track-fallback.jpg',
+    // Official still only — empty when unavailable (no generated art)
+    image: photo?.hasOfficial ? photo.src : '',
     imageAlt: vehicleName,
     bodyHtml: body,
     stubHtml: stub,
@@ -965,24 +1001,27 @@ function openVehicleTicket(vehicleName, focusRecordId) {
     },
   });
 
-  // Prefer local vehicle art (network-stable)
-  if (photo) {
+  // Official image with YouTube still as secondary — never generated art
+  if (photo?.hasOfficial) {
     const img = mount.querySelector('.tear-ticket__image');
     if (img) {
       img.addEventListener(
         'error',
         () => {
-          if (img.dataset.fb) {
-            img.src = './assets/vehicles/track-fallback.jpg';
+          if (img.dataset.fb || !photo.fallback) {
+            img.remove();
+            mount.classList.add('tear-ticket--no-image');
             return;
           }
           img.dataset.fb = '1';
-          img.src = photo.fallback || './assets/vehicles/track-fallback.jpg';
+          img.src = photo.fallback;
         },
         { once: true },
       );
-      img.src = photo.fallback || photo.src;
+      img.src = photo.src;
     }
+  } else {
+    mount.classList.add('tear-ticket--no-image');
   }
 
   gate.hidden = false;

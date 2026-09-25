@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS records (
   record_date       TEXT NOT NULL,         -- ISO date YYYY-MM-DD
   record_date_raw   TEXT NOT NULL,         -- DD.MM.YYYY
   video_url         TEXT,
+  photo_url         TEXT,                  -- official still only (nuerburgring / their CDN)
   source_url        TEXT NOT NULL,
   official_note     TEXT,                  -- free text from official when available
   created_at        TEXT NOT NULL DEFAULT (datetime('now')),
@@ -64,6 +65,7 @@ CREATE TABLE IF NOT EXISTS news_items (
   summary_zh_is_site_translation INTEGER NOT NULL DEFAULT 0,
   published_at  TEXT NOT NULL,             -- ISO date
   source_url    TEXT NOT NULL,
+  image_url     TEXT,                      -- official listing/article image
   created_at    TEXT NOT NULL DEFAULT (datetime('now')),
   updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );

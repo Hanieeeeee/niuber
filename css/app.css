@@ -1384,12 +1384,16 @@ body.has-media-bg #vehicle-modal .modal--vehicle {
 }
 
 .detail-photo.is-missing::before {
-  content: attr(data-missing);
+  content: none;
+}
+
+.detail-photo__empty {
   display: grid;
   place-items: center;
   min-height: 140px;
   color: var(--muted);
   font-size: 12px;
+  padding: 16px;
 }
 
 .detail-photo__link {

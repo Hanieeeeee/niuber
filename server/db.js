@@ -49,6 +49,9 @@ if (DatabaseCtor) {
   db.exec('PRAGMA journal_mode = WAL;');
   db.exec('PRAGMA foreign_keys = ON;');
   db.exec(SCHEMA);
+  // migrate columns added after first publish
+  try { db.exec('ALTER TABLE records ADD COLUMN photo_url TEXT'); } catch { /* exists */ }
+  try { db.exec('ALTER TABLE news_items ADD COLUMN image_url TEXT'); } catch { /* exists */ }
 } else {
   jsonMode = true;
   mkdirSync(dirname(jsonPath), { recursive: true });

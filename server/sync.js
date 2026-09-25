@@ -8,6 +8,7 @@ import {
   parseRecordsHtml,
   parseNewsHtml,
   parseNewsNextPage,
+  parseOfficialArticleImage,
   discoverWidgetUrls,
   unwrapWidgetResponse,
   RECORDS_URL_EN,
@@ -80,6 +81,78 @@ function validateRecords(records) {
     }
   }
   return errors;
+}
+
+/**
+ * Match official news imagery to vehicles (by official model name in the title).
+ * Only stores nuerburgring / official CDN URLs.
+ */
+async function attachOfficialPhotos(recordMap, newsItems) {
+  const byVehicle = new Map();
+  for (const r of recordMap.values()) {
+    const key = String(r.vehicle_en || '').toLowerCase();
+    if (!byVehicle.has(key)) byVehicle.set(key, []);
+    byVehicle.get(key).push(r);
+  }
+
+  const scoreMatch = (vehicle, title) => {
+    const v = String(vehicle).toLowerCase().replace(/\s+/g, ' ').trim();
+    const t = String(title).toLowerCase().replace(/\s+/g, ' ').trim();
+    if (!v || !t) return 0;
+    // require the full official model string in the headline
+    if (!t.includes(v)) return 0;
+    return v.length;
+  };
+
+  for (const item of newsItems) {
+    let imageUrl = item.image_url || null;
+    if (!imageUrl && item.source_url) {
+      try {
+        const html = await fetchText(item.source_url);
+        imageUrl = parseOfficialArticleImage(html);
+      } catch {
+        /* keep null */
+      }
+    }
+    if (!imageUrl) continue;
+    // persist on news row
+    upsert('news_items', { ...item, image_url: imageUrl }, ['id']);
+
+    // bind this still to the single best-matching vehicle only
+    let best = null;
+    for (const [vehicle, list] of byVehicle) {
+      const s = scoreMatch(vehicle, item.title_en || '');
+      if (s > 0 && (!best || s > best.score)) best = { score: s, list, vehicle };
+    }
+    if (!best) continue;
+    for (const rec of best.list) {
+      rec.photo_url = imageUrl;
+      upsert(
+        'records',
+        {
+          id: rec.id,
+          track_id: rec.track_id,
+          category_id: rec.category_id,
+          vehicle_en: rec.vehicle_en,
+          vehicle_zh: rec.vehicle_zh ?? null,
+          brand: rec.brand,
+          driver_en: rec.driver_en ?? null,
+          driver_zh: rec.driver_zh ?? null,
+          lap_time_raw: rec.lap_time_raw,
+          lap_time_ms: rec.lap_time_ms,
+          lap_time_display: rec.lap_time_display,
+          record_date: rec.record_date,
+          record_date_raw: rec.record_date_raw,
+          video_url: rec.video_url ?? null,
+          photo_url: imageUrl,
+          source_url: rec.source_url,
+          official_note: rec.official_note ?? null,
+        },
+        ['id'],
+      );
+    }
+    await new Promise((r) => setTimeout(r, 250));
+  }
 }
 
 /**
@@ -188,6 +261,7 @@ export async function runSync() {
           record_date: r.record_date,
           record_date_raw: r.record_date_raw,
           video_url: r.video_url ?? null,
+          photo_url: r.photo_url ?? null,
           source_url: r.source_url,
           official_note: r.official_note ?? null,
         },
@@ -197,6 +271,7 @@ export async function runSync() {
     }
 
     // --- News (first 2 pages, polite) ---
+    const newsItems = [];
     try {
       let url = NEWS_URL_EN;
       for (let page = 0; page < 2 && url; page += 1) {
@@ -204,6 +279,7 @@ export async function runSync() {
         const news = parseNewsHtml(newsHtml, url);
         for (const item of news.items) {
           upsert('news_items', item, ['id']);
+          newsItems.push(item);
           newsSeen += 1;
         }
         url = parseNewsNextPage(newsHtml, url);
@@ -212,6 +288,13 @@ export async function runSync() {
     } catch (newsErr) {
       status = 'partial';
       error = `news: ${newsErr.message}`;
+    }
+
+    // Official stills from news pages (nuerburgring / their S3) → records.photo_url
+    try {
+      await attachOfficialPhotos(dedup, newsItems);
+    } catch (photoErr) {
+      warnings.push(`photos: ${photoErr.message}`);
     }
 
     dataVersion = createHash('sha256')
