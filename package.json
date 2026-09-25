@@ -1,0 +1,21 @@
+{
+  "name": "ring-records",
+  "version": "1.0.0",
+  "description": "Ring Records — Nürburgring official lap record archive (bilingual)",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "sync": "node server/sync-cli.js",
+    "test:parser": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3"
+  }
+}

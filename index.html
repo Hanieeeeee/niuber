@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Ring Records 纽北圈速档案 — 纽伯格林官方圈速纪录双语档案。Independent archive of official Nürburgring lap records."
+    />
+    <title>Ring Records｜纽北圈速档案</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/tear-ticket.css" />
+  </head>
+  <body>
+    <canvas id="dither-bg" class="dither-bg" aria-hidden="true"></canvas>
+    <div id="media-bg" class="media-bg" hidden aria-hidden="true"></div>
+    <button type="button" id="media-mute-btn" class="media-mute-btn" hidden aria-label="Mute" title="Mute">
+      <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M4 10v4h3l5 4V6L7 10H4z" stroke-linejoin="round" />
+        <path d="M16 9a4 4 0 010 6" stroke-linecap="round" />
+        <path d="M18.5 7a7 7 0 010 10" stroke-linecap="round" />
+      </svg>
+      <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" hidden>
+        <path d="M4 10v4h3l5 4V6L7 10H4z" stroke-linejoin="round" />
+        <path d="M17 9l4 6M21 9l-4 6" stroke-linecap="round" />
+      </svg>
+    </button>
+    <a class="skip-link" href="#board-section">Skip to records</a>
+
+    <header class="topbar" role="banner">
+      <div class="topbar__brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="brand-title">Ring Records</div>
+          <div class="brand-sub" data-i18n="brand.sub">纽北圈速档案</div>
+        </div>
+      </div>
+
+      <div class="topbar__search">
+        <label class="sr-only" for="search" data-i18n="search.label">搜索车型或车手</label>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.5-3.5" stroke-linecap="round"></path>
+          </svg>
+          <input
+            id="search"
+            type="search"
+            class="search-input"
+            data-i18n-placeholder="search.placeholder"
+            placeholder="搜索车型 / 车手 / 品牌…"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <div class="topbar__actions">
+        <div class="badge" id="sync-pill" title="">
+          <span class="sync-dot" id="sync-dot"></span>
+          <span class="sync-text" id="sync-text">…</span>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero (reactbits: text entrance + spotlight/bento stats) — shares dither surface with app -->
+    <section class="hero" aria-label="Intro">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">
+          <span class="hero__pulse" aria-hidden="true"></span>
+          <span data-i18n="hero.eyebrow">纽伯格林官方圈速 · 独立档案</span>
+        </p>
+        <h1 class="hero__title">
+          <span class="hero__line" data-i18n="hero.title1">北环圈速</span>
+          <span class="hero__line hero__line--accent" data-i18n="hero.title2">可核对的纪录</span>
+        </h1>
+        <p class="hero__desc" data-i18n="hero.desc">
+          完整收录纽伯格林官方纪录榜单与纪录动态。按车型级别浏览，动力形式仅作筛选；不同赛道与计时口径独立分榜。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#board-section" data-i18n="hero.cta">查看圈速榜单</a>
+          <a
+            class="btn btn--ghost btn--lg"
+            href="https://nuerburgring.de/info/nuerburgring/records?locale=en"
+            target="_blank"
+            rel="noopener"
+            data-i18n="hero.official"
+            >官方来源</a
+          >
+        </div>
+
+        <div class="bento" id="hero-stats">
+          <article class="bento__card spotlight-card">
+            <div class="bento__label" data-i18n="hero.stat.records">官方纪录</div>
+            <div class="bento__value mono" id="stat-records">—</div>
+            <div class="bento__hint" data-i18n="hero.stat.recordsHint">条已核验成绩</div>
+          </article>
+          <article class="bento__card spotlight-card">
+            <div class="bento__label" data-i18n="hero.stat.classes">车型分类</div>
+            <div class="bento__value mono" id="stat-classes">—</div>
+            <div class="bento__hint" data-i18n="hero.stat.classesHint">官方分类覆盖</div>
+          </article>
+          <article class="bento__card spotlight-card">
+            <div class="bento__label" data-i18n="hero.stat.nords">北环距离</div>
+            <div class="bento__value mono">20.832</div>
+            <div class="bento__hint" data-i18n="hero.stat.nordsHint">km · flying start</div>
+          </article>
+          <article class="bento__card spotlight-card">
+            <div class="bento__label" data-i18n="hero.stat.sync">数据同步</div>
+            <div class="bento__value bento__value--sm" id="stat-sync">—</div>
+            <div class="bento__hint mono" id="stat-sync-time">—</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <main id="main" class="layout">
+      <aside class="rail" aria-label="Filters">
+        <section class="panel glass-card">
+          <h2 class="panel__title" data-i18n="filter.track">赛道布局</h2>
+          <div class="track-tabs" id="track-tabs" role="tablist"></div>
+        </section>
+
+        <section class="panel glass-card">
+          <h2 class="panel__title" data-i18n="filter.categories">车型分类</h2>
+          <p class="panel__hint" data-i18n="filter.officialOnly">按车型级别浏览；动力形式在下方筛选。不同计时口径独立分榜。</p>
+          <nav id="category-tree" class="cat-tree"></nav>
+        </section>
+
+        <section class="panel glass-card">
+          <h2 class="panel__title" data-i18n="filter.filters">筛选</h2>
+          <div class="field">
+            <label for="filter-brand" data-i18n="filter.brand">品牌</label>
+            <select id="filter-brand"></select>
+          </div>
+          <div class="field">
+            <label for="filter-year" data-i18n="filter.year">年份</label>
+            <select id="filter-year"></select>
+          </div>
+          <div class="field">
+            <label for="filter-power" data-i18n="filter.powertrain">动力形式</label>
+            <select id="filter-power">
+              <option value="" data-i18n="filter.all">全部</option>
+              <option value="combustion" data-i18n="filter.combustion">燃油/混动</option>
+              <option value="electric" data-i18n="filter.electric">纯电</option>
+              <option value="prototypes" data-i18n="filter.prototypes">原型/预生产</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn--ghost" id="reset-filters" data-i18n="filter.reset" style="width: 100%">
+            重置筛选
+          </button>
+        </section>
+
+        <section class="panel glass-card panel--note">
+          <p class="disclaimer" data-i18n="disclaimer.short" style="margin: 0">
+            本站为引用纽伯格林官方来源的独立档案，非官方站点。
+          </p>
+        </section>
+      </aside>
+
+      <section class="content" id="board-section" aria-label="Leaderboard">
+        <div class="content__head">
+          <div>
+            <h2 class="content__title" id="board-title">—</h2>
+            <p class="content__meta" id="board-meta"></p>
+          </div>
+          <div class="content__tools">
+            <span class="badge badge--warn" id="summarize-badge" hidden data-i18n="badge.siteSummary">
+              本站汇总排序
+            </span>
+            <button type="button" class="btn btn--primary" id="open-compare" disabled>
+              <span data-i18n="compare.open">对比</span>
+              <span class="btn__count" id="compare-count">0</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="notice" id="notice" hidden role="status"></div>
+
+        <div class="table-wrap glass-card" id="table-wrap">
+          <table class="board" id="board">
+            <thead>
+              <tr>
+                <th class="col-check"><span class="sr-only" data-i18n="table.select">选择</span></th>
+                <th class="col-rank" data-i18n="table.rank">#</th>
+                <th class="col-vehicle" data-i18n="table.vehicle">车型版本</th>
+                <th class="col-time" data-i18n="table.time">圈速</th>
+                <th class="col-driver" data-i18n="table.driver">车手</th>
+                <th class="col-date" data-i18n="table.date">日期</th>
+                <th class="col-cat" data-i18n="table.category">分类</th>
+                <th class="col-src" data-i18n="table.source">来源</th>
+              </tr>
+            </thead>
+            <tbody id="board-body"></tbody>
+          </table>
+          <div class="empty" id="empty" hidden>
+            <p class="empty__title" data-i18n="empty.title">无匹配纪录</p>
+            <p class="empty__hint" data-i18n="empty.hint">请调整搜索词或筛选条件。</p>
+          </div>
+          <div class="loading" id="loading">
+            <div class="loading__bar"></div>
+            <p data-i18n="loading.records">正在载入官方圈速…</p>
+          </div>
+        </div>
+
+        <section class="news glass-card" aria-label="Record news">
+          <div class="news__head">
+            <h2 data-i18n="news.title">官方纪录动态</h2>
+            <a
+              class="news__more"
+              href="https://nuerburgring.de/news/categories/rekordfahrten"
+              target="_blank"
+              rel="noopener"
+              data-i18n="news.more"
+              >官方全部 →</a
+            >
+          </div>
+          <div id="news-list" class="news__list"></div>
+        </section>
+      </section>
+
+      <aside class="side" aria-label="Detail and compare">
+        <section class="panel glass-card" id="detail-panel">
+          <h2 class="panel__title" data-i18n="detail.title">纪录详情</h2>
+          <div id="detail-body">
+            <p class="muted" style="margin: 0" data-i18n="detail.hint">点击表格中的一行查看详情。</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <!-- Tear ticket gate (reactbits TearTicket) -->
+    <div class="modal-root ticket-gate" id="ticket-gate" hidden>
+      <div class="modal-backdrop" data-close-ticket></div>
+      <div class="tear-ticket-wrap">
+        <div id="tear-ticket-root"></div>
+        <p class="muted" style="margin-top:18px" data-i18n="ticket.tearHint">
+          向右撕下存根，进入赛道影像
+        </p>
+      </div>
+    </div>
+
+    <!-- Vehicle detail modal -->
+    <div class="modal-root" id="vehicle-modal" hidden>
+      <div class="modal-backdrop" data-close-vehicle></div>
+      <div
+        class="modal modal--vehicle glass-card glow-border"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="vehicle-modal-title"
+      >
+        <button
+          type="button"
+          class="drawer-toggle"
+          id="vehicle-drawer-toggle"
+          aria-label="Collapse panel"
+          title="Collapse / expand"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="vehicle-panel__scroll">
+          <div class="modal__head">
+            <h2 id="vehicle-modal-title" data-i18n="vehicle.title">车型详情</h2>
+            <button type="button" class="btn btn--ghost" id="close-vehicle" data-i18n="compare.close">关闭</button>
+          </div>
+          <div id="vehicle-modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal (reactbits-style dialog) -->
+    <div class="modal-root" id="compare-drawer" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div
+        class="modal glass-card glow-border"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="compare-title"
+      >
+        <div class="modal__head">
+          <h2 id="compare-title" data-i18n="compare.title">纪录对比</h2>
+          <button type="button" class="btn btn--ghost" id="close-compare" data-i18n="compare.close">关闭</button>
+        </div>
+        <div id="compare-body"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p data-i18n="disclaimer.long">
+        Ring Records 为独立数据档案，引用纽伯格林官方公开页面。官方纪录以 Nürburgring 1927 GmbH &amp; Co. KG
+        公布为准。本站生成的跨分类汇总明确标注，不冒充官方独立榜单。
+      </p>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+node_modules/
+data/ring-records.db
+data/ring-records.db-*
+data/snapshots/
+.env
+.DS_Store
+*.log

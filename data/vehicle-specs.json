@@ -1,0 +1,99 @@
+{
+  "schema": "ring-records/vehicle-specs@1",
+  "note": "Optional curated specs. Missing fields render as 暂无资料 / No data. Every entry should cite a public source URL. Do not invent figures.",
+  "vehicles": {
+    "porsche-919-hybrid-evo": {
+      "name_en": "Porsche 919 Hybrid Evo",
+      "brand": "Porsche",
+      "powertrain": "hybrid",
+      "body": { "en": "LMP1-derived prototype", "zh": "LMP1 衍生原型车" },
+      "specs": {
+        "power": { "en": "1,160 hp (system, evo package)", "zh": "1,160 马力（系统，evo 套件）" },
+        "engine": { "en": "2.0 L V4 turbo + hybrid", "zh": "2.0 升 V4 涡轮 + 混动" },
+        "weight": { "en": "849 kg (min. weight, evo)", "zh": "849 kg（evo 最低重量）" },
+        "drive": { "en": "AWD", "zh": "四驱" }
+      },
+      "sources": ["https://en.wikipedia.org/wiki/Porsche_919_Hybrid"]
+    },
+    "vw-id-r": {
+      "name_en": "Volkswagen I.D. R",
+      "brand": "Volkswagen",
+      "powertrain": "electric",
+      "body": { "en": "Electric prototype", "zh": "纯电原型车" },
+      "specs": {
+        "power": { "en": "500 kW (680 hp)", "zh": "500 kW（680 马力）" },
+        "weight": { "en": "1,100 kg", "zh": "1,100 kg" },
+        "drive": { "en": "AWD (dual motor)", "zh": "四驱（双电机）" }
+      },
+      "sources": ["https://en.wikipedia.org/wiki/Volkswagen_ID.R"]
+    },
+    "mercedes-amg-one": {
+      "name_en": "Mercedes-AMG ONE",
+      "brand": "Mercedes-AMG",
+      "powertrain": "hybrid",
+      "body": { "en": "Plug-in hybrid hypercar", "zh": "插电混动超跑" },
+      "specs": {
+        "power": { "en": "782 kW (1,063 hp) system", "zh": "782 kW（1,063 马力）系统" },
+        "engine": { "en": "1.6 L V6 turbo (F1-derived) + 4 e-motors", "zh": "1.6 升 V6 涡轮（F1 衍生）+ 4 电机" },
+        "drive": { "en": "AWD", "zh": "四驱" }
+      },
+      "sources": ["https://en.wikipedia.org/wiki/Mercedes-AMG_One"]
+    },
+    "porsche-911-gt3-rs": {
+      "name_en": "Porsche 911 GT3 RS",
+      "brand": "Porsche",
+      "powertrain": "combustion",
+      "body": { "en": "Sports coupé", "zh": "跑车双门" },
+      "specs": {
+        "power": { "en": "386 kW (525 hp)", "zh": "386 kW（525 马力）" },
+        "engine": { "en": "4.0 L flat-6 naturally aspirated", "zh": "4.0 升水平对置六缸自吸" },
+        "drive": { "en": "RWD", "zh": "后驱" }
+      },
+      "sources": ["https://en.wikipedia.org/wiki/Porsche_911_GT3"]
+    },
+    "porsche-taycan-turbo-gt-with-manthey-kit": {
+      "name_en": "Porsche Taycan Turbo GT with Manthey Kit",
+      "brand": "Porsche",
+      "powertrain": "electric",
+      "body": { "en": "Electric performance saloon", "zh": "纯电高性能四门" },
+      "specs": {
+        "power": { "en": "815 kW (1,108 hp) with Attack Mode", "zh": "815 kW（1,108 马力）含 Attack Mode" }
+      },
+      "sources": ["https://newsroom.porsche.com/"]
+    },
+    "xiaomi-su7-ultra-prototype": {
+      "name_en": "Xiaomi SU7 Ultra Prototype",
+      "brand": "Xiaomi",
+      "powertrain": "electric",
+      "body": { "en": "Electric performance prototype", "zh": "纯电高性能原型车" },
+      "specs": {
+        "power": { "en": "1,548 PS (tri-motor, prototype figure)", "zh": "1,548 PS（三电机，原型车数据）" }
+      },
+      "sources": ["https://www.xiaomiev.com/"]
+    },
+    "bmw-m2-cs": {
+      "name_en": "BMW M2 CS",
+      "brand": "BMW",
+      "powertrain": "combustion",
+      "body": { "en": "Compact coupé", "zh": "紧凑型双门" },
+      "specs": {
+        "power": { "en": "338 kW (460 hp)", "zh": "338 kW（460 马力）" },
+        "engine": { "en": "3.0 L twin-turbo inline-6", "zh": "3.0 升双涡轮直列六缸" },
+        "drive": { "en": "RWD", "zh": "后驱" }
+      },
+      "sources": ["https://en.wikipedia.org/wiki/BMW_M2"]
+    },
+    "ford-mustang-gtd": {
+      "name_en": "Ford Mustang GTD",
+      "brand": "Ford",
+      "powertrain": "combustion",
+      "body": { "en": "Track-focused muscle coupé", "zh": "赛道取向肌肉双门" },
+      "specs": {
+        "power": { "en": "607 kW (815 hp)", "zh": "607 kW（815 马力）" },
+        "engine": { "en": "5.2 L supercharged V8", "zh": "5.2 升机械增压 V8" },
+        "drive": { "en": "RWD", "zh": "后驱" }
+      },
+      "sources": ["https://en.wikipedia.org/wiki/Ford_Mustang_GTD"]
+    }
+  }
+}

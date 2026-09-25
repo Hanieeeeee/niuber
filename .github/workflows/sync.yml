@@ -1,0 +1,45 @@
+# Free scheduled sync + static publish (GitHub Actions)
+# Runs even when nobody visits the site.
+name: ring-records-sync
+
+on:
+  schedule:
+    # every 30 minutes (UTC)
+    - cron: '0,30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install
+        run: npm ci
+
+      - name: Sync from official Nürburgring sources
+        env:
+          RR_HTTP_USER_AGENT: RingRecords/1.0 (+https://github.com/${{ github.repository }}; independent archive)
+          RR_HTTP_TIMEOUT_MS: '20000'
+          RR_HTTP_RETRIES: '3'
+        run: npm run sync
+
+      - name: Commit published data
+        run: |
+          git config user.name "ring-records-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/published.json data/news-zh.yml || true
+          if git diff --staged --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "chore: sync official records $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

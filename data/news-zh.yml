@@ -1,0 +1,19 @@
+# Optional Chinese news summaries — 本站译文
+# Official English remains the source of truth; never invent facts not in the original.
+
+translations:
+  - id: mercedes-amg-cla-45-4matic-die-nordschleife-in-7-32-070-minuten
+    title_zh: Mercedes-AMG CLA 45 4MATIC+：北环 7:32.070
+    summary_zh: 2026年7月28日，Kevin Berger 驾驶 Mercedes-AMG CLA 45 4MATIC+ 跑出 7:32.070。气温 24°C、赛道温度 30°C 的夏日条件下，车辆从一开始便展现出速度。官方称该成绩体现了团队的工程实力。
+  - id: erste-offiziell-gemessene-autonome-rekordrunde-auf-der-nordschleife
+    title_zh: 北环首次官方计时自动驾驶纪录圈
+    summary_zh: 纽伯格林北环史上首次完成官方计时的全自动驾驶圈速。小米 YU7 GT（Track Package）在无人驾驶状态下跑出 10:29.483，官方纪录分类由此新增“Autonomous Driving”。
+  - id: xiaomi-yu7-gt-mit-track-package-die-nordschleife-in-7-22-755-minuten
+    title_zh: 小米 YU7 GT（Track Package）：北环 7:22.755
+    summary_zh: 2026年4月2日，Vincent Radermecker 驾驶配备 Track Package 的小米 YU7 GT 跑出 7:22.755，成为“纯电｜SUV”官方分类中的车型。
+  - id: taycan-turbo-gt-mit-manthey-kit-faehrt-neuen-rekord-in-06-55-533-minuten
+    title_zh: Taycan Turbo GT Manthey 套件刷新 6:55.533
+    summary_zh: 配备 Manthey 套件的 Taycan Turbo GT 由 Lars Kern 驾驶，以 6:55.533 完成 20.832 公里北环，较此前豪华电动分类纪录提升超过 9 秒。
+  - id: golf-gti-edition-50-die-nordschleife-in-7-44-523-minuten
+    title_zh: Golf GTI EDITION 50：北环 7:44.523
+    summary_zh: Volkswagen 试车手 Benjamin Leuchter 驾驶 Golf GTI EDITION 50 跑出 7:44.523，成为大众量产车系中的北环最快圈速。
