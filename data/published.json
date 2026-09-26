@@ -1,6 +1,6 @@
 {
   "schema": "ring-records/published@1",
-  "generated_at": "2026-09-26T17:37:45.313Z",
+  "generated_at": "2026-09-26T18:09:12.083Z",
   "disclaimer": {
     "en": "Independent archive citing official Nürburgring sources. Not affiliated with Nürburgring 1927 GmbH & Co. KG.",
     "zh": "本站为引用纽伯格林官方来源的独立档案，与 Nürburgring 1927 GmbH & Co. KG 无隶属关系。"
@@ -13,7 +13,7 @@
       "distance_km": 20.832,
       "timing_key": "nordschleife-20.832-flying",
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:40"
+      "created_at": "2026-09-26 18:08:37"
     },
     {
       "id": "grand_prix",
@@ -22,7 +22,7 @@
       "distance_km": 5.148,
       "timing_key": "grand-prix-5.148-flying",
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:40"
+      "created_at": "2026-09-26 18:08:37"
     }
   ],
   "categories": [
@@ -37,7 +37,7 @@
       "name_official": "Prototypes / pre-production vehicles",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars",
@@ -50,7 +50,7 @@
       "name_official": "Compact cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars",
@@ -63,7 +63,7 @@
       "name_official": "Mid-range cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/executive-cars",
@@ -76,7 +76,7 @@
       "name_official": "Executive cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/suvs",
@@ -89,7 +89,7 @@
       "name_official": "SUVs, off-road vehicles, vans, pick-ups",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars",
@@ -102,7 +102,7 @@
       "name_official": "Sports cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/super-sports-cars",
@@ -115,7 +115,7 @@
       "name_official": "Super sports cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/modified-vehicles",
@@ -128,7 +128,7 @@
       "name_official": "Modified Vehicles",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/mid-range-cars",
@@ -141,7 +141,7 @@
       "name_official": "Mid-range cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/executive-cars",
@@ -154,7 +154,7 @@
       "name_official": "Executive cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/suvs",
@@ -167,7 +167,7 @@
       "name_official": "SUVs, off-road vehicles, vans, pick-ups",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/super-sports-cars",
@@ -180,7 +180,7 @@
       "name_official": "Super sports cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/modified-vehicles",
@@ -193,7 +193,7 @@
       "name_official": "Modified Vehicles",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/autonomous-driving",
@@ -206,7 +206,7 @@
       "name_official": "Autonomous Driving",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     },
     {
       "id": "grand_prix/open/super-sports-cars",
@@ -219,7 +219,7 @@
       "name_official": "Super sports cars",
       "sort_order": 0,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
-      "created_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08"
     }
   ],
   "records": [
@@ -241,8 +241,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Porsche 919 Hybrid Evo|319546|2018-06-29",
@@ -262,8 +262,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|VW ID.R|365336|2019-06-03",
@@ -283,8 +283,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Ford GT Mk IV|375977|2026-04-01",
@@ -304,8 +304,8 @@
       "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8829/file/small-954e87e93c509070a1e15074723e5e9e.jpg",
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Xiaomi SU7 Ultra Prototype|382091|2025-04-01",
@@ -325,8 +325,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Lotus Evija X Hypercar|384047|2023-10-13",
@@ -346,8 +346,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/super-sports-cars|Mercedes-AMG ONE|389090|2024-09-23",
@@ -367,8 +367,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/super-sports-cars|Mercedes-AMG ONE|395183|2022-10-28",
@@ -388,8 +388,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|FORD Mustang GTD Competition|400835|2026-03-24",
@@ -409,8 +409,8 @@
       "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8857/file/small-267d71bd600418b7c19a03bdc1875120.jpg",
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 991 GT2 RS Manthey Performance Kit|403300|2021-06-14",
@@ -430,8 +430,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Ford F-150 Lightning SuperTruck|403482|2025-08-05",
@@ -451,8 +451,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/modified-vehicles|Porsche GT2 RS MR|404749|2018-10-25",
@@ -472,8 +472,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 GT3 RS Manthey Kit|405389|2026-04-15",
@@ -493,8 +493,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Xiaomi SU7 Ultra prototype|406874|2024-10-28",
@@ -514,8 +514,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Mercedes-AMG GT Black Series|408047|2020-11-04",
@@ -535,8 +535,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Ford Transit SuperVan 4.2|408393|2025-08-05",
@@ -556,8 +556,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Chevrolet Corvette ZR1X|409275|2025-06-24",
@@ -577,8 +577,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 GT3 RS|409328|2022-10-05",
@@ -598,8 +598,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Chevrolet Corvette ZR1|410763|2025-06-24",
@@ -619,8 +619,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 GT3 (992.2) Manthey Kit|410863|2026-04-15",
@@ -640,8 +640,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Ford Mustang GTD|412072|2025-04-09",
@@ -661,8 +661,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 GT3 (992.2) Manthey Kit|412981|2025-11-07",
@@ -682,8 +682,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/modified-vehicles|Porsche 911 GT3 RS MR|414340|2021-04-29",
@@ -703,8 +703,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/executive-cars|Porsche Taycan Turbo GT with Manthey Kit|415533|2026-04-15",
@@ -724,8 +724,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 GT3 Manthey Performance Kit|415737|2022-04-21",
@@ -745,8 +745,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 GT3|416294|2025-04-08",
@@ -766,8 +766,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Ford Mustang GTD|417685|2024-08-07",
@@ -787,8 +787,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/super-sports-cars|YANGWANG U9 Xtreme|419157|2025-08-22",
@@ -808,8 +808,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 GT3|419930|2020-09-15",
@@ -829,8 +829,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 718 GT4 RS Manthey Kit|423121|2023-05-09",
@@ -850,8 +850,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 Turbo S|423920|2024-09-11",
@@ -871,8 +871,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/executive-cars|Xiaomi SU7 Ultra with Track Package|424957|2025-04-01",
@@ -892,8 +892,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/super-sports-cars|Rimac Nevera|425298|2023-08-18",
@@ -913,8 +913,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/executive-cars|Porsche Taycan Turbo GT with Weissach package|427550|2023-09-12",
@@ -934,8 +934,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 718 Cayman GT4 RS|429300|2021-09-17",
@@ -955,8 +955,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Chevrolet Corvette Z06|431826|2025-06-27",
@@ -976,8 +976,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars|BMW M4 CSL|438137|2023-04-05",
@@ -997,8 +997,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Lynk & Co 03 Cyan Concept|440143|2019-08-19",
@@ -1018,8 +1018,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars|BMW M4 CSL|440207|2022-04-12",
@@ -1039,8 +1039,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars|BMW M4 CS|441989|2023-04-04",
@@ -1060,8 +1060,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/suvs|Xiaomi YU7 GT with Track Package|442755|2026-04-02",
@@ -1081,8 +1081,8 @@
       "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8953/file/small-aacfc5fc0ed5bdc70e08ee90d9fdd46b.jpg",
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars|Jaguar XE SV Project 8|443164|2019-07-08",
@@ -1102,8 +1102,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/executive-cars|Porsche Panamera Turbo S E-Hybrid|444172|2024-07-12",
@@ -1123,8 +1123,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/modified-vehicles|Tesla Model S Plaid Track Package|445231|2023-06-02",
@@ -1144,8 +1144,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|BMW M2 CS|445534|2025-04-11",
@@ -1165,8 +1165,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/executive-cars|Mercedes-AMG GT 63 S 4MATIC+|447800|2020-11-04",
@@ -1186,8 +1186,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars|BMW M3 CS|448760|2023-04-05",
@@ -1207,8 +1207,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars|BMW M3 CS Touring|449490|2025-04-11",
@@ -1228,8 +1228,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/executive-cars|Porsche Panamera Turbo S|449810|2020-07-24",
@@ -1249,8 +1249,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/executive-cars|Mercedes-AMG GT 63 S 4MATIC+|450110|2018-10-15",
@@ -1270,8 +1270,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/mid-range-cars|Mercedes-AMG CLA 45 4MATIC+|452070|2026-07-28",
@@ -1291,8 +1291,8 @@
       "photo_url": "https://nuerburgring.de/s3/image/5025/file/original-ed30adbe17021cfd07cb9a9c6bd96968",
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|Audi RS 3|453123|2024-06-07",
@@ -1312,8 +1312,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/executive-cars|Porsche Taycan Turbo S|453350|2022-04-11",
@@ -1333,8 +1333,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars|BMW M3 Touring|455060|2022-04-12",
@@ -1354,8 +1354,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/executive-cars|Tesla Model S Plaid|455579|2021-09-09",
@@ -1375,8 +1375,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/suvs|Audi RS Q8 performance|456698|2024-06-10",
@@ -1396,8 +1396,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|BMW M2 Coupé|458706|2023-04-05",
@@ -1417,8 +1417,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/suvs|Porsche Cayenne Turbo GT|458925|2021-06-14",
@@ -1438,8 +1438,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|Audi RS 3 Limousine|460748|2021-06-14",
@@ -1459,8 +1459,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/suvs|Audi RS Q8|462253|2019-09-13",
@@ -1480,8 +1480,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|Golf GTI EDITION 50|464523|2026-04-08",
@@ -1501,8 +1501,8 @@
       "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8926/file/small-b10a0703c377f27cf2312526ad4e8608.jpg",
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|Honda Civic Type R|464881|2023-03-24",
@@ -1522,8 +1522,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|Renault Mégane R.S. Trophy-R|465390|2019-04-05",
@@ -1543,8 +1543,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|VW Golf GTI EDITION 50|466130|2025-04-23",
@@ -1564,8 +1564,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/compact-cars|Volkswagen Golf R „20 Years“|473219|2022-06-03",
@@ -1585,8 +1585,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/combustion/suvs|Mercedes-AMG GLC 63 S 4MATIC+|474400|2018-11-06",
@@ -1606,8 +1606,8 @@
       "photo_url": null,
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     },
     {
       "id": "nordschleife/electric/autonomous-driving|Xiaomi YU7 GT with Track Package|629483|2026-06-08",
@@ -1627,8 +1627,8 @@
       "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8953/file/small-aacfc5fc0ed5bdc70e08ee90d9fdd46b.jpg",
       "source_url": "https://nuerburgring.de/info/nuerburgring/records?locale=en",
       "official_note": null,
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:08",
+      "updated_at": "2026-09-26 18:09:08"
     }
   ],
   "news_items": [
@@ -1642,8 +1642,8 @@
       "published_at": "2026-08-04",
       "source_url": "https://nuerburgring.de/news/mercedes-amg-cla-45-4matic-die-nordschleife-in-7-32-070-minuten",
       "image_url": "https://nuerburgring.de/s3/image/5025/file/original-ed30adbe17021cfd07cb9a9c6bd96968",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     },
     {
       "id": "erste-offiziell-gemessene-autonome-rekordrunde-auf-der-nordschleife",
@@ -1655,8 +1655,8 @@
       "published_at": "2026-06-22",
       "source_url": "https://nuerburgring.de/news/erste-offiziell-gemessene-autonome-rekordrunde-auf-der-nordschleife",
       "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/9078/file/small-38fc470120a062af69e70c0c6e56bc67.jpg",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     },
     {
       "id": "xiaomi-yu7-gt-mit-track-package-die-nordschleife-in-7-22-755-minuten",
@@ -1668,8 +1668,8 @@
       "published_at": "2026-05-21",
       "source_url": "https://nuerburgring.de/news/xiaomi-yu7-gt-mit-track-package-die-nordschleife-in-7-22-755-minuten",
       "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8953/file/small-aacfc5fc0ed5bdc70e08ee90d9fdd46b.jpg",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     },
     {
       "id": "golf-gti-edition-50-die-nordschleife-in-7-44-523-minuten",
@@ -1681,8 +1681,8 @@
       "published_at": "2026-05-07",
       "source_url": "https://nuerburgring.de/news/golf-gti-edition-50-die-nordschleife-in-7-44-523-minuten",
       "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8926/file/small-b10a0703c377f27cf2312526ad4e8608.jpg",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     },
     {
       "id": "taycan-turbo-gt-mit-manthey-kit-faehrt-neuen-rekord-in-06-55-533-minuten",
@@ -1694,8 +1694,8 @@
       "published_at": "2026-05-07",
       "source_url": "https://nuerburgring.de/news/taycan-turbo-gt-mit-manthey-kit-faehrt-neuen-rekord-in-06-55-533-minuten",
       "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8925/file/small-d3f3b3d6e88246384488ca245107d1c5.jpg",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     },
     {
       "id": "ford-mustang-gtd-competition-die-nordschleife-in-06-40-835-minuten",
@@ -1707,8 +1707,8 @@
       "published_at": "2026-04-17",
       "source_url": "https://nuerburgring.de/news/ford-mustang-gtd-competition-die-nordschleife-in-06-40-835-minuten",
       "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8857/file/small-267d71bd600418b7c19a03bdc1875120.jpg",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     },
     {
       "id": "ford-gt-mk-iv-die-nordschleife-in-06-15-977-minuten",
@@ -1720,8 +1720,8 @@
       "published_at": "2026-04-02",
       "source_url": "https://nuerburgring.de/news/ford-gt-mk-iv-die-nordschleife-in-06-15-977-minuten",
       "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8829/file/small-954e87e93c509070a1e15074723e5e9e.jpg",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     },
     {
       "id": "zwischen-geheimhaltung-und-globaler-strahlkraft",
@@ -1733,8 +1733,8 @@
       "published_at": "2026-01-27",
       "source_url": "https://nuerburgring.de/news/zwischen-geheimhaltung-und-globaler-strahlkraft",
       "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8686/file/small-8c88dfe77dfe0fa6e398ffd2cde3b2ea.jpg",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     },
     {
       "id": "rekordjagd-auf-der-nordschleife-die-offiziellen-bestzeiten-2025",
@@ -1746,12 +1746,12 @@
       "published_at": "2025-12-11",
       "source_url": "https://nuerburgring.de/news/rekordjagd-auf-der-nordschleife-die-offiziellen-bestzeiten-2025",
       "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8661/file/small-dfaf680c2ca22edf5233d8b4ea9b9173.jpg",
-      "created_at": "2026-09-26 17:37:43",
-      "updated_at": "2026-09-26 17:37:43"
+      "created_at": "2026-09-26 18:09:09",
+      "updated_at": "2026-09-26 18:09:09"
     }
   ],
   "meta": {
-    "last_check_at": "2026-09-26T17:37:40.312Z",
+    "last_check_at": "2026-09-26T18:08:37.650Z",
     "last_success_at": null,
     "last_status": "running",
     "data_version": null
