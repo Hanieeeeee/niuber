@@ -233,6 +233,14 @@ function renderAll() {
   if (state.activeId) renderDetail(state.activeId);
 }
 
+/** User-facing data date (YYYY-MM-DD), not implementation details. */
+function dataAsOfDate(meta) {
+  const ts = meta?.last_success_at || meta?.data_date || meta?.last_check_at || state.data?.generated_at;
+  if (!ts) return '';
+  const d = String(ts).slice(0, 10);
+  return /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : '';
+}
+
 function renderHeroStats() {
   const rec = document.getElementById('stat-records');
   const cls = document.getElementById('stat-classes');
@@ -242,16 +250,9 @@ function renderHeroStats() {
   const classCount = new Set(allRecords().map((r) => classKeyOf(r.category_id))).size;
   if (cls) cls.textContent = String(classCount);
   const meta = state.data?.meta || {};
-  if (syncEl) {
-    if (state.sourceMode === 'static') syncEl.textContent = t('notice.static').slice(0, 18) + '…';
-    else if (meta.last_status === 'failed') syncEl.textContent = t('sync.fail');
-    else if (meta.is_stale) syncEl.textContent = t('sync.stale');
-    else syncEl.textContent = t('sync.ok');
-  }
-  if (syncTime) {
-    const ts = meta.last_success_at || meta.last_check_at;
-    syncTime.textContent = ts ? String(ts).replace('T', ' ').slice(0, 16) + 'Z' : t('sync.never');
-  }
+  const asOf = dataAsOfDate(meta);
+  if (syncEl) syncEl.textContent = asOf || t('sync.never');
+  if (syncTime) syncTime.textContent = t('sync.asOf');
 }
 
 function renderTracks() {
@@ -441,14 +442,17 @@ function renderBoard() {
 
     const driver = document.createElement('td');
     driver.className = 'col-driver driver';
+    driver.dataset.label = t('table.driver');
     driver.textContent = r.driver_en || (getLang() === 'zh' ? '（官方未列）' : '— (not listed)');
 
     const date = document.createElement('td');
     date.className = 'col-date date';
+    date.dataset.label = t('table.date');
     date.textContent = r.record_date;
 
     const cat = document.createElement('td');
     cat.className = 'col-cat cat';
+    cat.dataset.label = t('table.category');
     const catBtn = document.createElement('button');
     catBtn.type = 'button';
     catBtn.className = 'cat-jump';
@@ -462,6 +466,7 @@ function renderBoard() {
 
     const src = document.createElement('td');
     src.className = 'col-src';
+    src.dataset.label = t('table.source');
     const a = document.createElement('a');
     a.className = 'src-link';
     a.href = r.source_url;
@@ -488,6 +493,24 @@ function renderBoard() {
 
   $('#compare-count').textContent = String(state.selected.size);
   $('#open-compare').disabled = state.selected.size < 2;
+  updateFilterCount();
+}
+
+function updateFilterCount() {
+  const el = $('#filter-count');
+  if (!el) return;
+  let n = 0;
+  if (state.classKey) n += 1;
+  if (state.powertrain) n += 1;
+  if (state.brand) n += 1;
+  if (state.year) n += 1;
+  if (state.q) n += 1;
+  if (n > 0) {
+    el.hidden = false;
+    el.textContent = String(n);
+  } else {
+    el.hidden = true;
+  }
 }
 
 function youtubeId(url) {
@@ -780,19 +803,16 @@ function renderNews() {
 
 function renderNotice() {
   const meta = state.data?.meta || {};
-  if (state.sourceMode === 'static') {
-    showNotice(t('notice.static'));
-    return;
-  }
+  // Only surface real problems — not “static package” tech notes.
   const staleAfter = meta.stale_after_minutes || 180;
   const lastOk = meta.last_success_at;
   if (!lastOk) {
-    showNotice(t('notice.fail'), true);
+    hideNotice();
     return;
   }
   const ageMs = Date.now() - Date.parse(lastOk);
   if (meta.is_stale || ageMs > staleAfter * 60_000) {
-    showNotice(`${t('notice.stale')} ${lastOk}`);
+    showNotice(`${t('notice.stale')} ${String(lastOk).slice(0, 10)}`);
     return;
   }
   if (meta.last_status === 'failed') {
@@ -815,31 +835,24 @@ function hideNotice() {
 
 function renderSyncPill() {
   const meta = state.data?.meta || {};
-  if (state.sourceMode === 'static') {
-    $('#sync-dot').className = 'sync-dot is-warn';
-    $('#sync-text').textContent = t('notice.static').slice(0, 28) + '…';
-    $('#sync-pill').title = `${t('sync.lastSuccess')}: ${meta.last_success_at || t('sync.never')}`;
-    return;
-  }
-  renderSyncFromStatus(meta);
+  renderSyncFromStatus({ ...meta, is_stale: meta.is_stale });
 }
 
 function renderSyncFromStatus(status) {
   const dot = $('#sync-dot');
   const text = $('#sync-text');
-  if (status.last_status === 'failed') {
+  const asOf = dataAsOfDate(status);
+  if (status.last_status === 'failed' && !asOf) {
     dot.className = 'sync-dot is-bad';
     text.textContent = t('sync.fail');
   } else if (status.is_stale) {
     dot.className = 'sync-dot is-warn';
-    text.textContent = t('sync.stale');
+    text.textContent = asOf ? `${t('sync.asOf')} ${asOf}` : t('sync.stale');
   } else {
     dot.className = 'sync-dot is-ok';
-    text.textContent = t('sync.ok');
+    text.textContent = asOf ? `${t('sync.asOf')} ${asOf}` : t('sync.ok');
   }
-  $('#sync-pill').title = `${t('sync.lastCheck')}: ${status.last_check_at || '—'}\n${t('sync.lastSuccess')}: ${
-    status.last_success_at || '—'
-  }`;
+  $('#sync-pill').title = asOf ? `${t('sync.asOf')} ${asOf}` : t('sync.never');
   renderHeroStats();
 }
 
@@ -1232,6 +1245,15 @@ function bindEvents() {
   $('#open-compare').addEventListener('click', openCompare);
   $('#close-compare').addEventListener('click', () => {
     $('#compare-drawer').hidden = true;
+  });
+
+  // Mobile filter drawer
+  const toggleFilters = $('#toggle-filters');
+  const filterRail = $('#filter-rail');
+  toggleFilters?.addEventListener('click', () => {
+    const open = filterRail.classList.toggle('is-open');
+    toggleFilters.setAttribute('aria-expanded', String(open));
+    if (open) filterRail.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   document.querySelectorAll('[data-close-modal]').forEach((el) => {
     el.addEventListener('click', () => {

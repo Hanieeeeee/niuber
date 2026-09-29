@@ -1,3 +1,4 @@
+<!-- AI生成 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -18,6 +19,8 @@
     <link rel="stylesheet" href="./css/tear-ticket.css" />
   </head>
   <body>
+<p data-aigc-mark="1" style="margin:0 0 8px;font-size:10px;line-height:1.3;color:#6b6560;font-weight:400;">AI生成</p>
+
     <canvas id="dither-bg" class="dither-bg" aria-hidden="true"></canvas>
     <div id="media-bg" class="media-bg" hidden aria-hidden="true"></div>
     <button type="button" id="media-mute-btn" class="media-mute-btn" hidden aria-label="Mute" title="Mute">
@@ -124,7 +127,13 @@
     </section>
 
     <main id="main" class="layout">
-      <aside class="rail" aria-label="Filters">
+      <div class="mobile-filter-bar">
+        <button type="button" class="btn btn--ghost btn--block" id="toggle-filters" aria-expanded="false" aria-controls="filter-rail">
+          <span data-i18n="filter.toggle">筛选与分类</span>
+          <span class="btn__count" id="filter-count" hidden>0</span>
+        </button>
+      </div>
+      <aside class="rail" id="filter-rail" aria-label="Filters">
         <section class="panel glass-card">
           <h2 class="panel__title" data-i18n="filter.track">赛道布局</h2>
           <div class="track-tabs" id="track-tabs" role="tablist"></div>

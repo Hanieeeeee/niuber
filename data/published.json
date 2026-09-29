@@ -1,6 +1,6 @@
 {
   "schema": "ring-records/published@1",
-  "generated_at": "2026-09-25T15:22:36.924Z",
+  "generated_at": "2026-09-28T10:00:10.923Z",
   "disclaimer": {
     "en": "Independent archive citing official Nürburgring sources. Not affiliated with Nürburgring 1927 GmbH & Co. KG.",
     "zh": "本站为引用纽伯格林官方来源的独立档案，与 Nürburgring 1927 GmbH & Co. KG 无隶属关系。"
@@ -326,7 +326,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8274/file/small-afe66bce6b11a1c29716c91931f1a143.jpg"
     },
     {
       "id": "nordschleife/prototypes/prototypes|Lotus Evija X Hypercar|384047|2023-10-13",
@@ -515,7 +515,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8274/file/small-afe66bce6b11a1c29716c91931f1a143.jpg"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Mercedes-AMG GT Black Series|408047|2020-11-04",
@@ -767,7 +767,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://nuerburgring.de/s3/image/5025/file/original-ed30adbe17021cfd07cb9a9c6bd96968"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Ford Mustang GTD|417685|2024-08-07",
@@ -809,7 +809,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8575/file/small-4be04d614689f9703ba1ab0b0acfd432.jpg"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 911 GT3|419930|2020-09-15",
@@ -830,7 +830,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://nuerburgring.de/s3/image/5025/file/original-ed30adbe17021cfd07cb9a9c6bd96968"
     },
     {
       "id": "nordschleife/combustion/sports-cars|Porsche 718 GT4 RS Manthey Kit|423121|2023-05-09",
@@ -872,7 +872,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8459/file/small-8fa745bbddee74eba770ae780dedad2b.jpg"
     },
     {
       "id": "nordschleife/electric/executive-cars|Xiaomi SU7 Ultra with Track Package|424957|2025-04-01",
@@ -977,7 +977,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8362/file/small-e56197e3e097426879b6fd66e8458b1d.jpg"
     },
     {
       "id": "nordschleife/combustion/mid-range-cars|BMW M4 CSL|438137|2023-04-05",
@@ -1166,7 +1166,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8289/file/small-06ab673de8f87dc5532d100b2109419b.jpg"
     },
     {
       "id": "nordschleife/combustion/executive-cars|Mercedes-AMG GT 63 S 4MATIC+|447800|2020-11-04",
@@ -1565,7 +1565,7 @@
       "official_note": null,
       "created_at": "2026-09-24 08:17:58",
       "updated_at": "2026-09-24 08:17:58",
-      "photo_url": null
+      "photo_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8252/file/small-c586b9e228085800b08c1baea169780b.jpg"
     },
     {
       "id": "nordschleife/combustion/compact-cars|Volkswagen Golf R „20 Years“|473219|2022-06-03",
@@ -1636,14 +1636,14 @@
       "id": "porsche-911-gt3-mit-manthey-kit-die-nordschleife-in-6-52-981-minuten",
       "title_en": "Porsche 911 GT3 with Manthey-Kit: The Nordschleife in 6:52,981 minutes!",
       "title_zh": null,
-      "summary_en": "05 December, FridayPorsche 911 GT3 with Manthey-Kit: The Nordschleife in 6:52,981 minutes!On November 7, 2025, reigning DTM champion Ayhancan Güven completed the 20.8 kilometers of the Nordschleife in impressive 6:52.981 minutes at the wheel of the Porsche 911 GT3 with Manthey kit under difficult conditions. All record drives and further information Onboard through the Green HellThe record lap of the Porsche 911 GT3 (992.2) Manthey Kit is now available on the Nürburgring YouTube...Read now",
+      "summary_en": "On November 7, 2025, reigning DTM champion Ayhancan Güven completed the 20.8 kilometers of the Nordschleife in impressive 6:52.981 minutes at the wheel of the Porsche 911 GT3 with Manthey kit under difficult conditions. All record drives and further information Onboard through the Green HellThe record lap of the Porsche 911 GT3 (992.2) Manthey Kit is now available on the Nürburgring YouTube...",
       "summary_zh": null,
       "summary_zh_is_site_translation": 0,
-      "published_at": "2026-09-25",
+      "published_at": "2026-12-05",
       "source_url": "https://nuerburgring.de/news/porsche-911-gt3-mit-manthey-kit-die-nordschleife-in-6-52-981-minuten",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://nuerburgring.de/s3/image/5025/file/original-ed30adbe17021cfd07cb9a9c6bd96968"
     },
     {
       "id": "mercedes-amg-cla-45-4matic-die-nordschleife-in-7-32-070-minuten",
@@ -1773,7 +1773,7 @@
       "source_url": "https://nuerburgring.de/news/neuer-rekord-fuer-den-yangwang-u9-xtreme-das-schnellste-elektrische-supersportauto-auf-der-nordschleife",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8575/file/small-4be04d614689f9703ba1ab0b0acfd432.jpg"
     },
     {
       "id": "porsche-911-turbo-s-mit-7-03-92-auf-der-nordschleife",
@@ -1786,7 +1786,7 @@
       "source_url": "https://nuerburgring.de/news/porsche-911-turbo-s-mit-7-03-92-auf-der-nordschleife",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8459/file/small-8fa745bbddee74eba770ae780dedad2b.jpg"
     },
     {
       "id": "ford-supervan-und-supertruck-unter-7-minuten-auf-der-nordschleife",
@@ -1799,7 +1799,7 @@
       "source_url": "https://nuerburgring.de/news/ford-supervan-und-supertruck-unter-7-minuten-auf-der-nordschleife",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8457/file/small-a9558654ca0e3233b9871e6d96e21904.jpg"
     },
     {
       "id": "7-11-826-6-50-763-6-49-275-der-chevrolet-corvette-z06-zr1-und-zr1x-erobern-die-nordschleife-in-rekordzeit",
@@ -1812,7 +1812,7 @@
       "source_url": "https://nuerburgring.de/news/7-11-826-6-50-763-6-49-275-der-chevrolet-corvette-z06-zr1-und-zr1x-erobern-die-nordschleife-in-rekordzeit",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8362/file/small-e56197e3e097426879b6fd66e8458b1d.jpg"
     },
     {
       "id": "der-bmw-3-cs-touring-absolviert-eine-rundenzeit-von-07-29-490-in-der-gruenen-hoelle",
@@ -1825,7 +1825,7 @@
       "source_url": "https://nuerburgring.de/news/der-bmw-3-cs-touring-absolviert-eine-rundenzeit-von-07-29-490-in-der-gruenen-hoelle",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8361/file/small-1c148ddead15b7c3c3b023237e3cadfd.jpg"
     },
     {
       "id": "neuer-bmw-m2-cs-ist-mit-7-25-5-minuten-schnellster-kompaktwagen-in-der-gruenen-hoelle",
@@ -1838,7 +1838,7 @@
       "source_url": "https://nuerburgring.de/news/neuer-bmw-m2-cs-ist-mit-7-25-5-minuten-schnellster-kompaktwagen-in-der-gruenen-hoelle",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8289/file/small-06ab673de8f87dc5532d100b2109419b.jpg"
     },
     {
       "id": "xiaomi-su7-ultra-prototype-absolviert-eine-rundenzeit-von-6-22-091-minuten-auf-der-nordschleife",
@@ -1851,7 +1851,7 @@
       "source_url": "https://nuerburgring.de/news/xiaomi-su7-ultra-prototype-absolviert-eine-rundenzeit-von-6-22-091-minuten-auf-der-nordschleife",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8274/file/small-afe66bce6b11a1c29716c91931f1a143.jpg"
     },
     {
       "id": "neuer-vw-golf-gti-edition-50-ist-schnellstes-volkswagen-serienmodell-auf-der-nordschleife",
@@ -1864,12 +1864,12 @@
       "source_url": "https://nuerburgring.de/news/neuer-vw-golf-gti-edition-50-ist-schnellstes-volkswagen-serienmodell-auf-der-nordschleife",
       "created_at": "2026-09-24 11:30:10",
       "updated_at": "2026-09-24 11:30:10",
-      "image_url": null
+      "image_url": "https://s3nbrg01prod.s3.eu-central-1.amazonaws.com/media_manager_uploads/store/image/8252/file/small-c586b9e228085800b08c1baea169780b.jpg"
     }
   ],
   "meta": {
-    "last_check_at": "2026-09-25T15:22:26.715Z",
-    "last_success_at": "2026-09-25T15:22:11.104Z",
+    "last_check_at": "2026-09-28T10:00:00.173Z",
+    "last_success_at": "2026-09-28T09:30:16.850Z",
     "last_status": "running",
     "data_version": "8531918ebeedeb14"
   }
